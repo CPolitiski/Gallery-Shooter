@@ -38,19 +38,19 @@ class ArrayBoom extends Phaser.Scene {
 
     preload() {
         this.load.setPath("./assets/");
-        this.load.image("white", "./ships/ship (1).png");
-        this.load.image("cannon", "./Ship parts/cannonBall.png");
-        this.load.image("GreenShip", "./ships/ship (4).png");
-        this.load.image("RedShip", "./ships/ship (3).png")
+        this.load.image("white", "ship (1).png");
+        this.load.image("cannon", "cannonBall.png");
+        this.load.image("GreenShip", "ship (4).png");
+        this.load.image("RedShip", "ship (3).png")
 
         // For animation
-        this.load.image("explosion3", "./Effects/explosion3.png");
-        this.load.image("explosion2", "./Effects/explosion2.png");
-        this.load.image("explosion1", "./Effects/explosion1.png");
+        this.load.image("explosion3", "explosion3.png");
+        this.load.image("explosion2", "explosion2.png");
+        this.load.image("explosion1", "explosion1.png");
 
-        this.load.image("sea", "./Tiles/tile_73.png");
+        this.load.image("sea", "tile_73.png");
 
-        this.load.audio("hit", "./Audio/footstep_concrete_001.ogg")
+        this.load.audio("hit", "footstep_concrete_001.ogg")
 
         //this.load.audio("hit", "jingles_HIT13.ogg");
         //this.load.audio("bgm", "FAVELA.mp3");
@@ -273,7 +273,7 @@ class ArrayBoom extends Phaser.Scene {
             this.updateScore();
 
             this.sound.play("hit");
-            
+
             this.boom.on(Phaser.Animations.Events.ANIMATION_COMPLETE, () => {
                 this.resetRedEnemy();
             }, this);
