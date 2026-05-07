@@ -73,6 +73,7 @@ class ArrayBoom extends Phaser.Scene {
 
         my.sprite.white = this.add.sprite(game.config.width/2, game.config.height - 40, "white");
         my.sprite.white.setScale(0.75);
+        my.sprite.white.flipY = true;
 
         my.sprite.green = this.add.sprite(game.config.width/2, 80, "GreenShip");
         my.sprite.green.setScale(0.50);
